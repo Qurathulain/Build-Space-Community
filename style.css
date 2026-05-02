@@ -1,0 +1,353 @@
+/* BuildSpace shared theme and layout styles */
+:root {
+  --bg-main: #0b1220;
+  --bg-surface: #111a2b;
+  --bg-card: #151f33;
+  --text-main: #e8f1ff;
+  --text-muted: #96a8c6;
+  --accent: #39a9ff;
+  --accent-2: #7d5cff;
+  --success: #2dd4bf;
+  --border: #26344f;
+  --shadow: 0 14px 30px rgba(0, 0, 0, 0.32);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: "Segoe UI", "Poppins", system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at top left, #162543 0%, #0b1220 55%, #070c17 100%);
+  color: var(--text-main);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7fd0ff;
+}
+
+.page-wrap {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.auth-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem 0;
+}
+
+.auth-card {
+  width: min(900px, 100%);
+  background: linear-gradient(155deg, rgba(21, 31, 51, 0.94), rgba(14, 22, 38, 0.96));
+  border: 1px solid rgba(57, 169, 255, 0.2);
+  border-radius: 1.1rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.auth-brand {
+  background: linear-gradient(160deg, rgba(57, 169, 255, 0.2), rgba(125, 92, 255, 0.2));
+}
+
+.brand-title {
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  font-weight: 700;
+}
+
+.brand-subtitle {
+  color: var(--text-muted);
+}
+
+.tab-pill .btn {
+  border-radius: 999px;
+}
+
+.form-control,
+.form-control:focus,
+textarea.form-control:focus {
+  background: #0d1526;
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.form-control::placeholder,
+textarea.form-control::placeholder {
+  color: #7d90b0;
+}
+
+.form-note {
+  color: #ff9f9f;
+  font-size: 0.85rem;
+}
+
+.btn-accent {
+  background: linear-gradient(130deg, var(--accent), var(--accent-2));
+  color: white;
+  border: 0;
+}
+
+.btn-accent:hover {
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 20px rgba(57, 169, 255, 0.25);
+}
+
+.app-nav {
+  background: rgba(10, 16, 29, 0.95);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.logo-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(140deg, var(--accent), var(--accent-2));
+  color: white;
+  font-weight: 700;
+}
+
+.nav-link {
+  color: #b6c8e6;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffffff;
+}
+
+.avatar-mini {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(57, 169, 255, 0.5);
+}
+
+.surface-card {
+  background: linear-gradient(160deg, rgba(18, 28, 46, 0.95), rgba(13, 21, 37, 0.95));
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.card-title,
+.h5,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #f2f7ff;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.feed-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.dashboard-page {
+  background: linear-gradient(180deg, #080f1d 0%, #071020 55%, #060d19 100%);
+}
+
+.dashboard-wrap {
+  width: 100%;
+  margin: 0;
+  padding-left: clamp(0.6rem, 2vw, 1.2rem);
+  padding-right: clamp(0.6rem, 2vw, 1.2rem);
+}
+
+.composer-card {
+  border-radius: 0.9rem;
+}
+
+.profile-bubble {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: #dbe9ff;
+  background: linear-gradient(145deg, #4d7eff, #5b63ff);
+  flex-shrink: 0;
+}
+
+.composer-input {
+  min-height: 76px;
+  border-radius: 0.7rem;
+  background: #071331;
+  border-color: #1f365f;
+}
+
+.post-card {
+  border-radius: 0.9rem;
+}
+
+.post-copy {
+  font-size: 1.12rem;
+  line-height: 1.45;
+}
+
+.post-actions {
+  border-top: 1px solid rgba(150, 168, 198, 0.18);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.post-action {
+  border: 0;
+  background: transparent;
+  color: #b7c9e9;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.45rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.post-action:hover {
+  color: #ffffff;
+  background: rgba(57, 169, 255, 0.1);
+}
+
+.post-action.like-btn.active {
+  color: #8ac8ff;
+}
+
+.post-card,
+.event-card,
+.community-card,
+.project-card,
+.profile-card {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.post-card:hover,
+.event-card:hover,
+.community-card:hover,
+.project-card:hover,
+.profile-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(57, 169, 255, 0.6);
+}
+
+.tag {
+  background: rgba(57, 169, 255, 0.15);
+  border: 1px solid rgba(57, 169, 255, 0.3);
+  color: #d6ecff;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin: 0.2rem 0.2rem 0 0;
+}
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.achievement-item {
+  background: linear-gradient(170deg, #08142d, #091327);
+  border: 1px solid #1a2a46;
+  border-radius: 0.75rem;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.2rem 1rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.achievement-item:hover {
+  transform: translateY(-3px);
+  border-color: #2f5e9f;
+}
+
+.achievement-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  color: #4c98ff;
+  background: radial-gradient(circle at 30% 30%, rgba(57, 124, 255, 0.26), rgba(26, 55, 110, 0.45));
+  margin-bottom: 0.7rem;
+}
+
+.achievement-item h3 {
+  font-size: 1.55rem;
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  margin: 0;
+}
+
+.achievement-item p {
+  margin: 0.25rem 0 0;
+  color: #7f95b8;
+}
+
+.fade-in {
+  animation: fadeUp 0.4s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .auth-brand {
+    display: none;
+  }
+
+  .page-wrap {
+    width: 94%;
+  }
+
+  .dashboard-wrap {
+    padding-left: 0.55rem;
+    padding-right: 0.55rem;
+  }
+
+  .post-copy {
+    font-size: 1rem;
+  }
+
+  .achievement-grid {
+    grid-template-columns: 1fr;
+  }
+}
